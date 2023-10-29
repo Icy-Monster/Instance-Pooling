@@ -42,18 +42,18 @@ end
 
 --// Creates a Key used to reference to the pool
 function Pool:CreateKey(Item: Instance): string
-	local Name = CreateHex(16, self.Items)
+	local Key = CreateHex(16, self.Items)
 		
 	local Folder = Instance.new("Folder")
-	Folder.Name = Name
+	Folder.Name = Key
 	Folder.Parent = self.Folder
 
 	local NewItem = Item:Clone()
 	NewItem.Parent = Folder
 
-	self.Items[Name] = {}
-	table.insert(self.Items[Name], NewItem)
-	return Folder.Name
+	self.Items[Key] = {}
+	table.insert(self.Items[Key], NewItem)
+	return Key
 end
 
 --// Returns an Instance from the Pool
