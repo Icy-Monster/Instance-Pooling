@@ -9,8 +9,9 @@ export type Pool<T> = {
 	
 	Items: {[string]: {[number]: Instance}}
 }
------------------------------------
----------PRIVATE FUNCTIONS---------
+
+----------------------------------
+---------PRIVATE FUNCTIONS--------
 
 local function CreateHex(Length: number, Items: {[string]: {}}): string
 	local Hex:string = ""
@@ -25,8 +26,9 @@ local function CreateHex(Length: number, Items: {[string]: {}}): string
 	return Hex
 end
 
----------PRIVATE FUNCTIONS---------
------------------------------------
+---------PRIVATE FUNCTIONS--------
+----------------------------------
+----------MAIN FUNCTIONS----------
 
 local Pool = {}
 Pool.__index = Pool
@@ -86,6 +88,9 @@ function Pool:Clear(Key: string)
 
 	self.Folder[Key]:ClearAllChildren()
 end
+
+----------MAIN FUNCTIONS----------
+----------------------------------
 
 return {
 	New = CreatePool,
