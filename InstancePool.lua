@@ -1,7 +1,7 @@
 --!strict
 --!native
 export type Pool<T> = {
-	CreateKey: (self: Pool<T>,Item: Instance ) -> string,
+	CreateKey: (self: Pool<T>,Item: Instance) -> string,
 	RetrieveItem: (self: Pool<T>, Key: string) -> Instance?,
 	StoreItem: (self: Pool<T>, Key: string, Item: Instance) -> (),
 	
@@ -12,7 +12,6 @@ export type Pool<T> = {
 
 ----------------------------------
 ---------PRIVATE FUNCTIONS--------
-
 local function CreateHex(Length: number, Items: {[string]: {}}): string
 	local Hex:string = ""
 	
