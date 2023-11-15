@@ -20,7 +20,7 @@ local function CreateHex(Length: number, Items: {[string]: {}}): string
 	end
 	
 	--Make sure that the key does not already exist, if it does regenerate it
-	if Items[Hex] then return Hex end
+	if Items[Hex] then return CreateHex(Length, Items) end
 	
 	return Hex
 end
