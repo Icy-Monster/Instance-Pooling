@@ -1,5 +1,9 @@
 --!strict
 --!native
+
+-- @IcyMonstrosity, 2023
+-- https://github.com/Icy-Monster/Instance-Pooling
+
 export type Pool<T> = {
 	CreateKey: (self: Pool<T>,Item: Instance) -> string,
 	RetrieveItem: (self: Pool<T>, Key: string) -> Instance?,
