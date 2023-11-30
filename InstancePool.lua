@@ -64,7 +64,7 @@ end
 --// Returns an Instance from the Pool
 function Pool:RetrieveItem(Key: string): Instance?
 	if not self.Items[Key] then return end
-	local Item: Instance
+	local Item: any
 
 	-- Checks if there are at least 2 items, if so then return the oldest one,
 	-- otherwise clone the only one left
